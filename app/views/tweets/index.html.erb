@@ -6,8 +6,17 @@
 
 <p>
     <%= e.message %>
+    <%= User.find(e.user_id).uid %>
     <%= link_to '削除',tweet_path(e), method: :delete %>
 </p>
 <% end %>
 
+<% if session[:login_uid] %>
 <%= link_to 'ツイート',new_tweet_path %>
+<% end %>
+
+<% if session[:login_uid] %>
+    <%= link_to 'ログアウト',top_logout_path %>
+<% else %>
+    <%= link_to 'ログイン',top_login_form_path %>
+<% end %>
