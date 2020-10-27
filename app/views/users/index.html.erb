@@ -7,7 +7,7 @@
 <% @users.each do |e| %>
     <p>
         <%= e.uid %>
-        <%= link_to '削除',user_path(e),method: :delete %>
+        <%= link_to '削除', user_path(e) , method: :delete %>
     </p>
 <% end %>
 

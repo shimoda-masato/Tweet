@@ -9,11 +9,9 @@
         <% end %>
     </ul>
   </font>
-
 <% end %>
 
-
-<%= form_for @user ,url: {action: :create} do  |f|%>
+<%= form_for @user ,url: {action: :create} do  |f| %>
  <p>
      <%= f.label :uid,'ユーザーID' %>
      <%= f.text_field :uid %>
@@ -29,3 +27,5 @@
  </p>
 
  <% end %>
+
+
